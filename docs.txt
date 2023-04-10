@@ -1,0 +1,57 @@
+doc 1 : 
+paragraphe 1
+
+je m'appelle ahmed  abbassi.je m'appelle semah yaakoubi.je m'appelle mahdi felah.
+
+j'ai 20ans.j'ai 21ans. j'ai 23ans.
+
+paragraphe 2
+
+Quand j'avais six ans j'ai vu, une fois, une magnifique image, dans un livre sur la Forêt Vierge qui s'appelait "Histoires Vécues". Ça représentait un serpent boa qui avalait un fauve. Voilà la copie du dessin.
+
+####
+
+doc 2 :
+paragraphe 1
+
+J'ai alors beaucoup réfléchi  sur les aventures de la jungle et, à mon tour, j'ai réussi, avec un crayon de couleur, à tracer mon premier dessin. Mon dessin numéro 1. Il était comme ça.
+
+paragraphe 2
+
+Il y a quelques années, en passant par la rue Plumet, la physionomie de la maison qui faisait l'angle de la petite rue des Postes m'apparut pour la première fois. Rien de plus singulier et de plus vague que cette apparition, qui cependant demeura longtemps gravée dans ma mémoire.
+
+####
+
+doc 3 : 
+paragraphe 1
+
+Aujourd'hui maman est morte. Ou peut-être hier, je ne sais pas. J'ai reçu un télégramme de l'asile: "Mère décédée. Enterrement demain. Sentiments distingués." Cela ne veut rien dire. C'était peut-être hier.
+
+paragraphe 2
+
+La rue Plumet était déserte. Il était un peu plus de cinq heures du soir. La porte de la maison était entr'ouverte.
+
+####
+
+doc 4 :
+paragraphe 1
+
+Le 27 juillet 1826, un jeune homme entra dans la ville de Verrières. Ce jeune homme était vêtu d'un habit de drap noir, assez usé et d'une étoffe grossière. Il portait des bottes jaunes et un petit chapeau de feutre avec des cordons dorés.
+
+paragraphe 2
+
+Il était à peine âgé de dix-huit ans, il avait de gros yeux noirs et des cheveux noirs et bouclés. Il portait une longue épée qui battait les mollets. Ce jeune homme, c'était Julien Sorel.
+
+####
+
+doc 5 :
+paragraphe 1
+
+Il y a quelques années, en passant par la rue Plumet, la physionomie de la maison qui faisait l'angle de la petite rue des Postes m'apparut pour la première fois. Rien de plus singulier et de plus vague que cette apparition, qui cependant demeura longtemps gravée dans ma mémoire.
+
+paragraphe 2
+
+J'ai alors beaucoup réfléchi sur les aventures de la jungle et, à mon tour, j'ai réussi, avec un crayon de couleur, à tracer mon premier dessin. Mon dessin numéro 1. Il était comme ça.
+
+
+

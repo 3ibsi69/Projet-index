@@ -1,5 +1,5 @@
 Document 1:
-football: 0.06
+football: 0.07
 jeu: 0.01
 joueurs: -0.03
 leurs: 0.00
@@ -7,40 +7,34 @@ mains: 0.02
 ballon: -0.01
 but: -0.01
 l'équipe: 0.01
-plus: 0.01
 
 Document 2:
-football: 0.13
+football: 0.14
 but: -0.02
 
 Document 3:
 chaussures: 0.01
-football: 0.03
+football: 0.04
 protège: 0.01
 tibias: 0.01
 joueurs: -0.01
-pour: 0.00
-mais: 0.00
+mais: 0.01
 coups: 0.01
 réparation: 0.01
-dans: -0.00
 l'arbitre: 0.01
 
 Document 4:
-football: 0.11
-en: 0.00
+football: 0.13
 siècle: 0.01
 monde: 0.00
 sport: 0.01
 tous: 0.01
-qui: 0.01
 joueurs: -0.01
 doivent: 0.01
 avoir: 0.01
-pour: 0.00
 
 Document 5:
-football: 0.12
+football: 0.13
 peut: 0.01
 également: 0.02
 compétitions: 0.02

@@ -7,7 +7,6 @@ mains: 2
 ballon: 2
 but: 2
 l'équipe: 2
-plus: 2
 
 Document 2:
 football: 5
@@ -19,25 +18,20 @@ football: 2
 protège: 2
 tibias: 2
 joueurs: 2
-pour: 2
 mais: 2
 coups: 2
 réparation: 2
-dans: 2
 l'arbitre: 2
 
 Document 4:
 football: 6
-en: 3
 siècle: 2
 monde: 2
 sport: 3
 tous: 2
-qui: 2
 joueurs: 2
 doivent: 2
 avoir: 2
-pour: 2
 
 Document 5:
 football: 5

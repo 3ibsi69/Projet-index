@@ -2,11 +2,11 @@ import math
 import re
 from collections import defaultdict
 from termcolor import colored
-with open("docs.txt", "r", encoding="utf-8") as f:
+with open("Corpuse.txt", "r", encoding="utf-8") as f:
     documents = f.read().split("####")
 
-# stopliste en avance
-stoplist = ["le", "la", "les", "un", "une", "de", "du", "des", "et", "à","est","au","a"]
+# stopliste 
+stoplist = ["le","la","les","un", "une", "de", "du", "des", "et", "à","est","au","a","dans","en","ce","l'","qui","que","pour","d'un","par","sur","plus","d'une","sont","son","avec","ne","pas","se","sa","ses","ou","dans","cette"]
 
 # freq min et max
 min_freq = 2
@@ -28,7 +28,7 @@ for mot, occurrences in list(index.items()):
         del index[mot]
 
 # Écriture les termes et freq dans un fichier
-with open("output.txt", "w", encoding="utf-8") as f1:
+with open("Frequence.txt", "w", encoding="utf-8") as f1:
     for i, document in enumerate(documents):
         f1.write(f"Document {i+1}:\n")
         term_freq = defaultdict(int)
@@ -43,7 +43,7 @@ with open("output.txt", "w", encoding="utf-8") as f1:
         f1.write("\n")
 
 # Écriture des poids de chaque terme dans un fichier
-with open("formule.txt", "w", encoding="utf-8") as f2:
+with open("Poids.txt", "w", encoding="utf-8") as f2:
     for i, document in enumerate(documents):
         f2.write(f"Document {i+1}:\n")
         term_freq = defaultdict(int)
@@ -62,19 +62,53 @@ with open("formule.txt", "w", encoding="utf-8") as f2:
         for term, weight in term_weight.items():
             f2.write(f"{term}: {weight:.2f}\n")
         f2.write("\n")
-# Recherche des documents pertinents pour un terme donné
+# Recherche des documents pertinents pour une requête de termes donnée 
+affiches = set()
 while True:
-    term = input("Entrez un terme : ")
-    if term == "":
+    query = input("Entrez une requête: ")
+    if query == "":
         break
-    query_terms = term.split()
-    if term not in index:
-        print("Terme non trouvé.")
+    query = query.lower()    
+    query_terms = re.split("[^\w']+", query) 
+    query_terms = [term for term in query_terms if term != "" and term not in stoplist] 
+    query_terms = set(query_terms) 
+    query_terms = list(query_terms)  
+    query_terms.sort() 
+    docs = set() 
+    for term in query_terms:
+        if term in index:
+            docs.update(index[term])
+    docs = list(docs)
+    docs.sort()
+    #print("Documents pertinents:", colored(" ".join(str(doc[0]+1) for doc in docs), "green"))
+    scores = []
+    for doc in docs:
+        doc_id = doc[0]
+        if doc_id in affiches:
+            continue
+        phrases = documents[doc_id].split("####")
+        found_terms = []
+        for phrase in phrases:
+            for term in query_terms:
+                if term in phrase.lower():
+                    found_terms.append(term)
+        if len(found_terms) > 0:
+            tf = {term: found_terms.count(term) for term in query_terms}
+            idf = {term: math.log(len(documents) / len(index[term])) for term in query_terms if term in index and len(index[term]) > 0}
+        
+            score = sum(tf[term] * idf[term] for term in query_terms if term in idf)
+            scores.append((doc_id, score, found_terms))
+    if len(scores) > 0:
+        scores.sort(key=lambda x: x[1], reverse=True)
+        for doc_id, score, found_terms in scores:
+            if doc_id in affiches: 
+                continue
+            affiches.add(doc_id)
+            print(f"Document {doc_id+1}:{colored('{:.3f}'.format(score), 'yellow')}") 
+            print("Termes trouvés:", colored(" ".join(found_terms), "green"))  
+            print()
     else:
-        relevant_docs = set([doc_id for doc_id, _ in index[term]])
-        print(f"{len(relevant_docs)} documents pertinents trouvés le terme'{colored(term, 'red')}':")
-        for doc_id in relevant_docs:
-            doc = documents[doc_id].replace(term, colored(term, 'red'))
-            term_count = doc.count(term)
-            print(f"Document {doc_id + 1} - contient {term} {term_count} fois :")
-            print(doc)
+        print("Aucun document trouvé")
+
+ 
+
